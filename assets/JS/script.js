@@ -91,3 +91,15 @@ const quizData = [
         answeredCorrectly: false
     }
 ];
+
+// DOM elements
+const questionText = document.getElementById("question-text");
+const optionsList = document.getElementById("options-list");
+const nextButton = document.getElementById("next-button");
+const score = 0;
+
+// Function to load a question and its options
+
+// Function to handle option selection
+
+// Function to calculate and display the user's score
