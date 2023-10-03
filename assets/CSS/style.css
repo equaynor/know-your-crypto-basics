@@ -3,6 +3,11 @@ body {
     background-image: url("../images/bockchain-network-background.webp");
     background-color: #303030;
     color: #F0F1F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
