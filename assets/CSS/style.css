@@ -42,3 +42,13 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+#next-button {
+    padding: 10px 20px;
+    background-color: #377E80;
+    color: #F0F1F2;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
