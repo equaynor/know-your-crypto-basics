@@ -131,6 +131,8 @@ if (selectedOption === currentQuestion.correct) {
         option.style.backgroundColor = "#ddd";
         option.removeEventListener("click", selectOption);
     });
+    currentQuestion.answeredCorrectly = true;
+    score++;
     nextButton.disabled = false;
     } else {
         //Incorrect answer
