@@ -137,23 +137,30 @@ function loadQuestion() {
 // Function to handle option selection
 function selectOption(selectedOption) {
 const currentQuestion = quizData[currentQuestionIndex];
-if (selectedOption === currentQuestion.correct) {
-    // Correct answer
-    optionsList.querySelectorAll(".option").forEach(option => {
-        option.style.backgroundColor = "#ddd";
-        option.removeEventListener("click", selectOption);
-        nextButton.disabled = false;
-    });
-    currentQuestion.answeredCorrectly = true;
-    score++;
-    
-    } else {
-        //Incorrect answer
-        optionsList.querySelector(".option:last-child").style.backgroundColor = "#ff7b7b";
-        nextButton.disabled = false;
+
+const options = optionsList.querySelectorAll(".option");
+
+for (let i = 0; i < options.length; i++) {
+    const option = options[i];
+    //
+    if (option.textContent === selectedOption) {
+        if (selectedOption === currentQuestion.correct) {
+            option.style.backgroundColor = "#8bc34a"; // Set correct option to green
+            currentQuestion.answeredCorrectly = true;
+            score++;
+        } else {
+            option.style.backgroundColor = "#ff7b7b"; // Set selected incorrect option to red
+            currentQuestion.answeredCorrectly = false;
+        }
+    } else if (option.textContent === currentQuestion.correct) {
+        option.style.backgroundColor = "#8bc34a"; // Set correct option to green
     }
+
+    option.removeEventListener("click", () => selectOption(option));
+    nextButton.disabled = false;
 }
 
+}
 
 // Event listener for the "Next" button
 nextButton.addEventListener("click", () => {
