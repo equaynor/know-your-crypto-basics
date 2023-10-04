@@ -20,7 +20,7 @@ const quizData = [
     },
     {
         question: "Who is the pseudonymous creator of Bitcoin?",
-        options: ["Satoshi Nakamoto", "Vitalik Buterin", "Charlie Lee", "Roger Ver"],
+        options: ["Satoshi Nakamoto", "Vitalik Buterin", "Charlie Lee", "Elon Musk"],
         correct: "Satoshi Nakamoto",
         answeredCorrectly: false
     },
