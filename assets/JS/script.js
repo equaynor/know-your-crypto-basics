@@ -100,9 +100,21 @@ const nextButton = document.getElementById("next-button");
 let currentQuestionIndex = 0;
 const score = 0;
 
+// Function to shuffle quizData
+function shuffleArray(array) {
+    let len = array.length,
+        currentIndex;
+    for (currentIndex = len - 1; currentIndex > 0; currentIndex--) {
+        let randIndex = Math.floor(Math.random() * (currentIndex + 1) );
+        var temp = array[currentIndex];
+        array[currentIndex] = array[randIndex];
+        array[randIndex] = temp;
+    }
+}
 
 // Function to load a question and its options
 function loadQuestion() {
+    shuffleArray(quizData);
     const currentQuestion = quizData[currentQuestionIndex];
     questionText.textContent = `Question ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
     
