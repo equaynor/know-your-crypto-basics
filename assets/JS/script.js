@@ -92,14 +92,17 @@ const quizData = [
     }
 ];
 
+// Track the indices of questions that have been asked
+const askedQuestions = [];
+
 // DOM elements
 const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextButton = document.getElementById("next-button");
 
-const askedQuestions = [];
+
 let currentQuestionIndex = 0;
-const score = 0;
+let score = 0;
 
 // Function to select a random question that has not been asked
 function selectRandomQuestion() {
@@ -140,30 +143,30 @@ function loadQuestion() {
 
 // Function to handle option selection
 function selectOption(selectedOption) {
-const currentQuestion = quizData[currentQuestionIndex];
+    const currentQuestion = quizData[askedQuestions[askedQuestions.length - 1]];
 
-const options = optionsList.querySelectorAll(".option");
+    const options = optionsList.querySelectorAll(".option");
 
-for (let i = 0; i < options.length; i++) {
-    const option = options[i];
-    //
-    if (option.textContent === selectedOption) {
-        if (selectedOption === currentQuestion.correct) {
+    for (let i = 0; i < options.length; i++) {
+        const option = options[i];
+
+        if (option.textContent === selectedOption) {
+            if (selectedOption === currentQuestion.correct) {
+                option.style.backgroundColor = "#8bc34a"; // Set correct option to green
+                currentQuestion.answeredCorrectly = true;
+                score++;
+            } else {
+                option.style.backgroundColor = "#ff7b7b"; // Set selected incorrect option to red
+                currentQuestion.answeredCorrectly = false;
+            }
+        } else if (option.textContent === currentQuestion.correct) {
             option.style.backgroundColor = "#8bc34a"; // Set correct option to green
-            currentQuestion.answeredCorrectly = true;
-            score++;
-        } else {
-            option.style.backgroundColor = "#ff7b7b"; // Set selected incorrect option to red
-            currentQuestion.answeredCorrectly = false;
         }
-    } else if (option.textContent === currentQuestion.correct) {
-        option.style.backgroundColor = "#8bc34a"; // Set correct option to green
+
+        option.removeEventListener("click", () => selectOption(option));
     }
 
-    option.removeEventListener("click", () => selectOption(option));
     nextButton.disabled = false;
-}
-
 }
 
 // Event listener for the "Next" button
