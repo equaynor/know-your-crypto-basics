@@ -14,7 +14,7 @@ const quizData = [
     },
     {
         question: "What is the total supply limit of Bitcoin?",
-        options: ["10 million", "100 million", "21 million", "1 billion"],
+        options: ["11 million", "12 million", "21 million", "21 billion"],
         correct: "21 million",
         answeredCorrectly: false
     },
