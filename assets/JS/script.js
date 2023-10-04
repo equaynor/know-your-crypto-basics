@@ -138,6 +138,19 @@ if (selectedOption === currentQuestion.correct) {
     }
 }
 
+// Function to move to the next question
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData.length) {
+        loadQuestion();
+    } else {
+        // Quiz finished
+        questionText.textContent = "Quiz Finished!";
+        optionsList.innerHTML = "";
+        nextButton.style.display = "none";
+    }
+}
+
 // Function to calculate and display the user's score
 
 // Initial question load
