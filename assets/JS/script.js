@@ -56,7 +56,7 @@ const quizData = [
     },
     {
         question: "What does the term 'HODL' mean in the context of cryptocurrencies?",
-        options: ["Hold on for dear life", "Sell immediately", "Buy more", "Diversify"],
+        options: ["Hold on for dear life", "Hold on and don't let go", "Hope our Dollars leap", "Hugging our digital ledger"],
         correct: "Hold on for dear life",
         answeredCorrectly: false
     },
