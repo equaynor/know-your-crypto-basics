@@ -147,9 +147,7 @@ function nextQuestion() {
         loadQuestion();
     } else {
         // Quiz finished
-        questionText.textContent = "Quiz Finished!";
-        optionsList.innerHTML = "";
-        nextButton.style.display = "none";
+        displayScore();
     }
 }
 
@@ -157,6 +155,11 @@ function nextQuestion() {
 nextButton.addEventListener("click", nextQuestion);
 
 // Function to calculate and display the user's score
+function displayScore() {
+    questionText.textContent = `Your Score: ${score}/${quizData.length}`;
+    optionsList.innerHTML = "";
+    nextButton.style.display = "none";
+}
 
 // Initial question load
 loadQuestion()
