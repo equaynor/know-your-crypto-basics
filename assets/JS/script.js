@@ -142,29 +142,29 @@ if (selectedOption === currentQuestion.correct) {
     optionsList.querySelectorAll(".option").forEach(option => {
         option.style.backgroundColor = "#ddd";
         option.removeEventListener("click", selectOption);
+        nextButton.disabled = false;
     });
     currentQuestion.answeredCorrectly = true;
     score++;
-    nextButton.disabled = false;
+    
     } else {
         //Incorrect answer
         optionsList.querySelector(".option:last-child").style.backgroundColor = "#ff7b7b";
+        nextButton.disabled = false;
     }
 }
 
-// Function to move to the next question
-function nextQuestion() {
+
+// Event listener for the "Next" button
+nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < quizData.length) {
         loadQuestion();
     } else {
         // Quiz finished
-        displayScore();
+        displayScore(); // Display the user's score
     }
-}
-
-// Event listener for the "Next" button
-nextButton.addEventListener("click", nextQuestion);
+});
 
 // Function to calculate and display the user's score
 function displayScore() {
