@@ -123,7 +123,22 @@ function loadQuestion() {
 }
 
 // Function to handle option selection
+function selectOption(selectedOption) {
+const currentQuestion = quizData[currentQuestionIndex];
+if (selectedOption === currentQuestion.correct) {
+    // Correct answer
+    optionsList.querySelectorAll(".option").forEach(option => {
+        option.style.backgroundColor = "#ddd";
+        option.removeEventListener("click", selectOption);
+    });
+    nextButton.disabled = false;
+    } else {
+        //Incorrect answer
+        optionsList.querySelector(".option:last-child").style.backgroundColor = "#ff7b7b";
+    }
+}
 
 // Function to calculate and display the user's score
 
+// Initial question load
 loadQuestion()
