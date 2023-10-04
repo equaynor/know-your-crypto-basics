@@ -96,10 +96,34 @@ const quizData = [
 const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextButton = document.getElementById("next-button");
+
+let currentQuestionIndex = 0;
 const score = 0;
 
+
 // Function to load a question and its options
+function loadQuestion() {
+    const currentQuestion = quizData[currentQuestionIndex];
+    questionText.textContent = `Question ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
+    
+    // Clear the options list
+    optionsList.innerHTML = "";
+    
+    // Populate options
+    currentQuestion.options.forEach((option, index) => {
+        const optionElement = document.createElement("li");
+        optionElement.className = "option";
+        optionElement.textContent = option;
+        optionElement.addEventListener("click", () => selectOption(option));
+        optionsList.appendChild(optionElement);
+    });
+    
+    // Disable the "Next" button until an option is selected
+    nextButton.disabled = true;
+}
 
 // Function to handle option selection
 
 // Function to calculate and display the user's score
+
+loadQuestion()
