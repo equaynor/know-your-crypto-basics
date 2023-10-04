@@ -151,6 +151,9 @@ function nextQuestion() {
     }
 }
 
+// Event listener for the "Next" button
+nextButton.addEventListener("click", nextQuestion);
+
 // Function to calculate and display the user's score
 
 // Initial question load
