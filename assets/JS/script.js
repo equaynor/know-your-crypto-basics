@@ -97,41 +97,45 @@ const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextButton = document.getElementById("next-button");
 
+const askedQuestions = [];
 let currentQuestionIndex = 0;
 const score = 0;
 
-// Function to shuffle quizData
-function shuffleArray(array) {
-    let len = array.length,
-        currentIndex;
-    for (currentIndex = len - 1; currentIndex > 0; currentIndex--) {
-        let randIndex = Math.floor(Math.random() * (currentIndex + 1) );
-        var temp = array[currentIndex];
-        array[currentIndex] = array[randIndex];
-        array[randIndex] = temp;
+// Function to select a random question that has not been asked
+function selectRandomQuestion() {
+    const remainingQuestions = quizData.filter((question, index) => !askedQuestions.includes(index));
+
+    if (remainingQuestions.length === 0) {
+        return null;
     }
+
+    const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+    return remainingQuestions[randomIndex];
 }
 
 // Function to load a question and its options
 function loadQuestion() {
-    shuffleArray(quizData);
-    const currentQuestion = quizData[currentQuestionIndex];
-    questionText.textContent = `Question ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
-    
-    // Clear the options list
-    optionsList.innerHTML = "";
-    
-    // Populate options
-    currentQuestion.options.forEach((option, index) => {
-        const optionElement = document.createElement("li");
-        optionElement.className = "option";
-        optionElement.textContent = option;
-        optionElement.addEventListener("click", () => selectOption(option));
-        optionsList.appendChild(optionElement);
-    });
-    
-    // Disable the "Next" button until an option is selected
-    nextButton.disabled = true;
+    const currentQuestion = selectRandomQuestion();
+
+    if (currentQuestion !== null) {
+        askedQuestions.push(quizData.indexOf(currentQuestion));
+
+        questionText.textContent = `Question ${askedQuestions.length}: ${currentQuestion.question}`;
+
+        optionsList.innerHTML = "";
+
+        currentQuestion.options.forEach((option, index) => {
+            const optionElement = document.createElement("li");
+            optionElement.className = "option";
+            optionElement.textContent = option;
+            optionElement.addEventListener("click", () => selectOption(option));
+            optionsList.appendChild(optionElement);
+        });
+
+        nextButton.disabled = true;
+    } else {
+        displayScore();
+    }
 }
 
 // Function to handle option selection
