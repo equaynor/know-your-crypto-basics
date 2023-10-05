@@ -170,8 +170,8 @@ Future features to add to improve the user interface would be:
 
 ### Bugs
 * **Solved bugs**
-| **Bug** | **Fix** |
-| ------- | ------- |
+| Bug | Fix |
+| --- | --- |
 | Shuffle function repeating questions | Add selectRandomQuestion function and use askedQuestions array |
 | Next button not working | Add event listener |
 | Questions container moving with each question | Fix height property |
