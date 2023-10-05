@@ -67,7 +67,7 @@ body {
     cursor: pointer;
 }
 
-#next-button {
+#next-button, #start-button {
     padding: 10px 20px;
     background-color: #377E80;
     color: #F0F1F2;
