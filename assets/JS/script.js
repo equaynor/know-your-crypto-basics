@@ -107,6 +107,16 @@ const startButton = document.getElementById("start-button");
 let currentQuestionIndex = 0;
 let score = 0;
 
+// Event listener for the "Start Quiz" button
+startButton.addEventListener("click", () => {
+    // Hide the start screen
+    startScreen.style.display = "none";
+    
+    // Show the quiz screen
+    quizScreen.style.display = "block";
+
+});
+
 // Function to select a random question that has not been asked
 function selectRandomQuestion() {
     const remainingQuestions = quizData.filter((question, index) => !askedQuestions.includes(index));
