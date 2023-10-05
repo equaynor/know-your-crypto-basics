@@ -99,6 +99,9 @@ const askedQuestions = [];
 const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextButton = document.getElementById("next-button");
+const startScreen = document.querySelector(".start-screen");
+const quizScreen = document.querySelector(".quiz-screen");
+const startButton = document.getElementById("start-button");
 
 
 let currentQuestionIndex = 0;
