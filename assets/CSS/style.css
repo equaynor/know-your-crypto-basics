@@ -161,6 +161,24 @@ footer {
     #question-text {
         margin-top: 10px;
     }
+
+    /* Footer */
+    #footer-content {
+        margin: 0 20px;
+    }
+    
+    .social-networks {
+        gap: 20px;
+    }
+    
+    .social-networks i {
+        font-size: 120%;
+    }
+    
+    .footer-text {
+        font-size: 75%;
+        text-align: right;
+    }
 }
 
 /* Media query: laptops and larger (992px and up) */
