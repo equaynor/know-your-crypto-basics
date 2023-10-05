@@ -74,7 +74,7 @@ body {
 }
 
 /* Buttons */
-#next-button, #start-button {
+#next-button, #start-button, #restart-button {
     padding: 10px 20px;
     background-color: #377E80;
     color: #F0F1F2;
@@ -83,6 +83,10 @@ body {
     font-size: 18px;
     cursor: pointer;
     margin-bottom: 5px;
+}
+
+#restart-button {
+    display: none;
 }
 
 #start-button {

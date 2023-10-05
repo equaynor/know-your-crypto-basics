@@ -3,7 +3,7 @@
 
 Welcome,
 
-Know Your Crypto Basics is a fun and interactive online quiz about cryptocurrency fun facts and fundamentals.
+Know Your Crypto Basics is a fun and interactive online quiz about cryptocurrency fun facts and fundamentals. The user can test his/hers general knowledge and see where there are still gaps to fill.
 
 # Table of Contents
 - [Know Your Crypto Basics](#know-your-crypto-basics)

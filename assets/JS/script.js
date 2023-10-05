@@ -93,7 +93,7 @@ const quizData = [
 ];
 
 // Track the indices of questions that have been asked
-const askedQuestions = [];
+let askedQuestions = [];
 
 // DOM elements
 const questionText = document.getElementById("question-text");
@@ -102,6 +102,7 @@ const nextButton = document.getElementById("next-button");
 const startScreen = document.querySelector(".start-screen");
 const quizScreen = document.querySelector(".quiz-screen");
 const startButton = document.getElementById("start-button");
+const restartButton = document.getElementById("restart-button");
 
 
 let currentQuestionIndex = 0;
@@ -198,7 +199,27 @@ function displayScore() {
     questionText.textContent = `Your Score: ${score}/${quizData.length}`;
     optionsList.innerHTML = "";
     nextButton.style.display = "none";
+    restartButton.style.display = "inline-block"
 }
+
+// Event listener for the "Restart" button
+restartButton.addEventListener("click", () => {
+    // Reset score
+    score = 0;
+
+    //Reset current question index
+    currentQuestionIndex = 0;
+
+    // Reset asked questions array
+    askedQuestions = [];
+
+    // Hide the "Restart Quiz" button and show the "Next" button
+    restartButton.style.display = "none";
+    nextButton.style.display = "inline-block";
+
+    // Reload initial question
+    loadQuestion();
+});
 
 // Initial question load
 loadQuestion()
