@@ -94,7 +94,7 @@ The background image displays blockchain technology.
 * **Color Scheme**
 I have selected to go with a modern crypto inspired color scheme.
 
-![Color Scheme](./assets/readme-assets/color-scheme.png)
+![Color Scheme](https://github.com/equaynor/know-your-crypto-basics/blob/main/assets/readme-assets/color-scheme.png)
 
 ## Features
 ### Existing Features
