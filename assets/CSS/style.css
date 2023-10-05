@@ -23,6 +23,10 @@ body {
     text-transform: capitalize;
 }
 
+.quiz-screen {
+    display: none;
+}
+
 #question-container {
     background-color: #303030;
     padding: 20px;
