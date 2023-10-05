@@ -129,11 +129,6 @@ footer {
 @media screen and (max-width: 376px) {
 
     /* General */
-
-    body {
-        display: block;
-    }
-
     .container {
         background-color: transparent;
         box-shadow: none;
