@@ -116,3 +116,17 @@ body {
         margin-top: 10px;
     }
 }
+
+/* Media query: laptops and larger (992px and up) */
+@media screen and (min-width: 992px) {
+
+    /* Add hover effects */
+    #next-button:hover, #start-button:hover {
+        background-color: #F0F1F2;
+        color: #377E80;
+    }
+    
+    .option:hover {
+        background-color: #bbb;
+    }
+}
