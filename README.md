@@ -168,8 +168,8 @@ Future features to add to improve the user interface would be:
 * **Performance**
   Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. [Lighthouse DevTools](./assets/readme-assets/lighthouse-score.png)
 
-### Bugs
-* **Solved bugs**
+### Fixed Bugs
+
 | Bug | Fix |
 | --- | --- |
 | Shuffle function repeating questions | Add selectRandomQuestion function and use askedQuestions array |
@@ -179,7 +179,7 @@ Future features to add to improve the user interface would be:
 | Restart button not aligned | Use inline-block property |
   
   
-* **Unfixed Bugs**
+### Unsolved Bugs
  - Site is scrolling vertically on mobile devices.
 
 ## Deployment
