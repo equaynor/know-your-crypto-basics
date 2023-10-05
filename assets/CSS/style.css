@@ -76,3 +76,43 @@ body {
     font-size: 18px;
     cursor: pointer;
 }
+
+/* Media query: mobile phones (376px and down) */
+@media screen and (max-width: 376px) {
+
+    .container {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #welcome-container {
+        margin-bottom: 20px;
+        padding: 0px;
+        background-color: #222226;
+        padding: 10px 20px;
+    }
+
+    #welcome-container div {
+        flex-direction: column;
+    }
+
+    #welcome-container i {
+        align-self: center;
+        padding-top: 10px;
+        padding-left: 0;
+    }
+
+    #welcome-container p {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #question-container {
+        border-radius: 0;
+    }
+
+    #question-text {
+        margin-top: 10px;
+    }
+}
