@@ -164,4 +164,8 @@ footer {
     .option:hover {
         background-color: #bbb;
     }
+
+    .social-networks i:hover {
+        color: #377E80;
+    }
 }
