@@ -27,6 +27,21 @@ body {
     display: none;
 }
 
+.container p {
+    text-align: left;
+    padding: 0 20px;
+}
+
+#welcome-container div {
+    display: flex;
+    flex-direction: row;
+}
+
+#welcome-container i {
+    align-self: center;
+    padding-left: 20px;
+}
+
 #question-container {
     background-color: #303030;
     padding: 20px;
