@@ -1,3 +1,5 @@
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-image: url("../images/bockchain-network-background.webp");
@@ -11,6 +13,7 @@ body {
     margin: 0;
 }
 
+/* Main Styles */
 .container {
     width: 500px;
     background-color: #222226;
@@ -33,6 +36,7 @@ body {
     padding: 0 20px;
 }
 
+/* Start Page Styles */
 #welcome-container div {
     display: flex;
     flex-direction: row;
@@ -43,6 +47,7 @@ body {
     padding-left: 20px;
 }
 
+/* Quiz Page Styles */
 #question-container {
     background-color: #303030;
     padding: 20px;
@@ -68,6 +73,7 @@ body {
     cursor: pointer;
 }
 
+/* Buttons */
 #next-button, #start-button {
     padding: 10px 20px;
     background-color: #377E80;
@@ -78,6 +84,7 @@ body {
     cursor: pointer;
 }
 
+/* Footer Styles */
 footer {
     background-color: #222226;
     color: #F0F1F2;
@@ -116,12 +123,14 @@ footer {
 /* Media query: mobile phones (376px and down) */
 @media screen and (max-width: 376px) {
 
+    /* General */
     .container {
         background-color: transparent;
         box-shadow: none;
         padding: 0;
     }
 
+    /* Start Screen */
     #welcome-container {
         margin-bottom: 20px;
         padding: 0px;
@@ -144,6 +153,7 @@ footer {
         margin: 10px 0;
     }
 
+    /* Quiz Screen*/
     #question-container {
         border-radius: 0;
     }
