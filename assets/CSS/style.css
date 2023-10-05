@@ -6,7 +6,6 @@ body {
     background-color: #303030;
     color: #F0F1F2;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -15,7 +14,7 @@ body {
 
 /* Main Styles */
 .container {
-    width: 500px;
+    width: 600px;
     background-color: #222226;
     padding: 15px;
     border-radius: 5px;
@@ -128,6 +127,7 @@ footer {
         background-color: transparent;
         box-shadow: none;
         padding: 0;
+        width: 100%;
     }
 
     /* Start Screen */
@@ -163,6 +163,11 @@ footer {
     }
 
     /* Footer */
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+    }
     #footer-content {
         margin: 0 20px;
     }
