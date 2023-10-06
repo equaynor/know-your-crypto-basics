@@ -115,6 +115,8 @@ const startButton = document.getElementById("start-button");
 const stopButton = document.getElementById("stop-button");
 const restartButton = document.getElementById("restart-button");
 
+let numberOfQuestions = 5
+let quizLength = quizData.length - numberOfQuestions
 let currentQuestionIndex = 0;
 let score = 0;
 
@@ -133,7 +135,7 @@ function selectRandomQuestion() {
     (question, index) => !askedQuestions.includes(index)
   );
 
-  if (remainingQuestions.length === 0) {
+  if (remainingQuestions.length === quizLength) {
     return null;
   }
 
@@ -196,7 +198,7 @@ function selectOption(selectedOption) {
 
 // Function to calculate and display the user's score
 function displayScore() {
-  questionText.textContent = `Your Score: ${score}/${quizData.length}`;
+  questionText.textContent = `Your Score: ${score}/${numberOfQuestions}`;
   optionsList.innerHTML = "";
   nextButton.style.display = "none";
   stopButton.style.display = "inline-block";
