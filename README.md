@@ -167,6 +167,9 @@ Future features to add to improve the user interface would be:
 
 * **CSS**
   No errors were found when passing through the official [(Jigsaw) validator](./assets/readme-assets/css-validator-result.png)
+
+* **JavaScript**
+  No errors were found when passing through the official [JS Hint validator](./assets/readme-assets/jshint-validator-result.png)
   
 * **Performance**
   Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. [Lighthouse DevTools](./assets/readme-assets/lighthouse-score.png)
