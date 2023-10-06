@@ -68,7 +68,7 @@ The application should initially be a simple design with enough interactivity to
 ### Scope
 The project scope follows the minimal viable features approach for the initial project. However the scope is such that interactive features to enhance the user experience can be added in future. 
 
-The project is to be a simple functioning online quiz game with randomly generated multiple choice questions. The score will accumulate up to a specified maximum which can be adjusted according to the number of questions available. Initially this will be set to 15 as the test pool of questions is relatively small but sufficient for the user to enjoy the experience. 
+The project is to be a simple functioning online quiz game with randomly generated multiple choice questions. The score will accumulate up to a specified maximum which can be adjusted by the developer. Initially this will be set to 5 to provide sufficient variety of questions out of the pool of 15 questions. 
 
 The purpose of the site will be clear from the landing page and will be visually attractive to the user. The site will be easy to navigate and fully responsive to all sized screens.
 
@@ -107,14 +107,17 @@ I have selected to go with a modern crypto inspired color scheme.
 
 * **Question Screen**
   * Displays a shuffled question.
-  * Displays four answer options
+  * Displays four answer options.
   * Highlights chosen answer if wrong in red and if right in green.
+  * Displays a "Next" button to move to the next question after choosing an answer.
+  * Displays a "Stop Quiz" button to end quiz and move to welcome screen.
 
 ![Question Screen](https://github.com/equaynor/know-your-crypto-basics/blob/main/assets/readme-assets/questions-section-desktop.png)
 
 * **Final Score Screen**
   * Displays users final score.
   * Displays a button to restart the quiz.
+  * Displays a "Stop Quiz" button to end quiz and move to welcome screen.
 
 ![Score Screen](https://github.com/equaynor/know-your-crypto-basics/blob/main/assets/readme-assets/score-section-desktop.png)
 
