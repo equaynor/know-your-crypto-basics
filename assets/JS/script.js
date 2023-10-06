@@ -115,8 +115,8 @@ const startButton = document.getElementById("start-button");
 const stopButton = document.getElementById("stop-button");
 const restartButton = document.getElementById("restart-button");
 
-let numberOfQuestions = 5
-let quizLength = quizData.length - numberOfQuestions
+let numberOfQuestions = 5;
+let quizLength = quizData.length - numberOfQuestions;
 let currentQuestionIndex = 0;
 let score = 0;
 
