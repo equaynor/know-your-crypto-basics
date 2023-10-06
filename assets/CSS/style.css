@@ -140,6 +140,10 @@ footer {
         width: 100%;
     }
 
+    .container h1 {
+        margin-top: 0;
+    }
+
     /* Start Screen */
     #welcome-container {
         margin-bottom: 20px;
